@@ -6,7 +6,12 @@ __pycache__/
 # Environment secrets
 .env
 
-# Database local files / IDE settings
+# Database local files / IDE settings / Local Stores
 .vscode/
 .idea/
 *.log
+*.sqlite
+*.sqlite3
+data/chroma_db/
+.DS_Store
+Thumbs.db
