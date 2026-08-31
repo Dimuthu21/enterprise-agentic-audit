@@ -1,18 +1,27 @@
 import os
 import re
+import sqlite3
 from typing import Dict, Any
 from dotenv import load_dotenv
 from langgraph.graph import StateGraph, END
+from langgraph.checkpoint.sqlite import SqliteSaver
 
 from backend.app.agent.state import AuditAgentState
-from mcp_servers.erpserver import get_purchase_order, get_vendor_status, POQueryInput, VendorQueryInput
+from mcp_servers.erpserver import (
+    get_purchase_order, 
+    get_vendor_status, 
+    record_audit_log,
+    POQueryInput, 
+    VendorQueryInput,
+    AuditLogInput
+)
 from mcp_servers.policy_rag_server import search_procurement_policies, PolicyQueryInput
 from mcp_servers.web_risk_server import check_vendor_web_risk, WebRiskInput
 
 load_dotenv()
 
 # -------------------------------------------------------------------
-# Node 1: Ingest & Extract Invoice Information
+# Node 1: Ingest & Extract
 # -------------------------------------------------------------------
 def extract_invoice_node(state: AuditAgentState) -> Dict[str, Any]:
     text = state["invoice_raw_text"]
@@ -42,35 +51,26 @@ def extract_invoice_node(state: AuditAgentState) -> Dict[str, Any]:
     }
 
 # -------------------------------------------------------------------
-# Node 2: Query ERP SQL Server via FastMCP Tool with Error Checking
+# Node 2: Query ERP via FastMCP Tool
 # -------------------------------------------------------------------
 def query_erp_mcp_node(state: AuditAgentState) -> Dict[str, Any]:
     logs = state["logs"]
     po_number = state["po_number"]
     logs.append(f"Node [ERP_MCP]: Attempting SQL Server tool call for PO '{po_number}'...")
 
-    # Validate PO parameter before execution
     if not po_number or po_number == "PO-UNKNOWN":
         tool_err = "Invalid or missing PO_Number format."
         logs.append(f"Node [ERP_MCP]: Tool Parameter Validation Error -> {tool_err}")
-        return {
-            "tool_error": tool_err,
-            "logs": logs
-        }
+        return {"tool_error": tool_err, "logs": logs}
 
-    # Execute FastMCP PO Tool Call
     po_res = get_purchase_order(POQueryInput(po_number=po_number))
     logs.append(f"Node [ERP_MCP]: DB Response -> {po_res}")
 
     if "Error:" in po_res or "not found" in po_res:
         tool_err = f"Database query failed: {po_res}"
         logs.append(f"Node [ERP_MCP]: Tool Execution Error -> {tool_err}")
-        return {
-            "tool_error": tool_err,
-            "logs": logs
-        }
+        return {"tool_error": tool_err, "logs": logs}
 
-    # Extract vendor ID and check vendor status
     vendor_id = "VEND-001"
     if "VendorID: " in po_res:
         vendor_id = po_res.split("VendorID: ")[1].split(" |")[0].strip()
@@ -91,12 +91,12 @@ def query_erp_mcp_node(state: AuditAgentState) -> Dict[str, Any]:
         "vendor_db_data": vendor_res,
         "discrepancy_amount": discrepancy,
         "is_discrepancy_detected": is_discrepancy,
-        "tool_error": None,  # Clear any prior errors on success
+        "tool_error": None,
         "logs": logs
     }
 
 # -------------------------------------------------------------------
-# Node 3: Reflection & Self-Correction Node (CYCLIC EDGE TARGET)
+# Node 3: Reflection & Self-Correction Node
 # -------------------------------------------------------------------
 def reflect_and_retry_node(state: AuditAgentState) -> Dict[str, Any]:
     logs = state["logs"]
@@ -105,17 +105,13 @@ def reflect_and_retry_node(state: AuditAgentState) -> Dict[str, Any]:
     
     logs.append(f"Node [Reflection]: Analyzing error '{tool_err}' (Retry Attempt {retry_count}/{state['max_retries']})...")
     
-    # Heuristic/Reflection logic: Attempt to fix common PO string formatting issues
     raw_text = state["invoice_raw_text"]
     fixed_po = state["po_number"]
     
-    # Retry strategy: Search for potential digits if standard prefix failed
     digit_match = re.search(r"PO[:\s#]*(\d+)", raw_text, re.IGNORECASE)
     if digit_match:
         fixed_po = f"PO-{digit_match.group(1)}"
-        logs.append(f"Node [Reflection]: Self-correction applied. Reformulated PO string to '{fixed_po}'")
-    else:
-        logs.append("Node [Reflection]: Unable to infer fixed PO from text context.")
+        logs.append(f"Node [Reflection]: Reformulated PO string to '{fixed_po}'")
 
     return {
         "po_number": fixed_po,
@@ -125,7 +121,7 @@ def reflect_and_retry_node(state: AuditAgentState) -> Dict[str, Any]:
     }
 
 # -------------------------------------------------------------------
-# Node 4: Query Policy RAG & Web Risk MCP Tools
+# Node 4: Query Compliance RAG & Web Risk MCP
 # -------------------------------------------------------------------
 def query_compliance_risk_node(state: AuditAgentState) -> Dict[str, Any]:
     logs = state["logs"]
@@ -155,16 +151,45 @@ def query_compliance_risk_node(state: AuditAgentState) -> Dict[str, Any]:
 # -------------------------------------------------------------------
 def auto_approve_node(state: AuditAgentState) -> Dict[str, Any]:
     logs = state["logs"]
-    logs.append("Node [Auto_Approve]: Invoice matches PO budget exactly. Auto-approving record...")
+    logs.append("Node [Auto_Approve]: Invoice matches PO budget. Preparing clean audit record...")
     return {
-        "audit_status": "APPROVED",
+        "audit_status": "AUTO_APPROVED",
         "risk_level": "LOW",
         "discrepancy_reason": "Invoice matches PO approved amount. No risk detected.",
         "logs": logs
     }
 
 # -------------------------------------------------------------------
-# Node 6: Fallback Exhausted Node
+# Node 6: Database Write Node (PROTECTED BY HUMAN-IN-THE-LOOP INTERRUPT)
+# -------------------------------------------------------------------
+def execute_db_write_node(state: AuditAgentState) -> Dict[str, Any]:
+    logs = state["logs"]
+    logs.append(f"Node [DB_Write]: Executing FastMCP write for Invoice '{state['invoice_id']}'...")
+
+    final_status = state.get("audit_status", "PENDING_HUMAN_APPROVAL")
+    if state.get("human_approved") is True:
+        final_status = "MANUALLY_APPROVED"
+    elif state.get("human_approved") is False:
+        final_status = "REJECTED"
+
+    # Write record directly to local SQL Server via FastMCP
+    write_res = record_audit_log(AuditLogInput(
+        invoice_id=state["invoice_id"],
+        po_number=state["po_number"],
+        billed_amount=state["billed_amount"],
+        discrepancy_amount=state.get("discrepancy_amount", 0.0),
+        status=final_status,
+        reason=state.get("discrepancy_reason", "No reason provided")
+    ))
+    
+    logs.append(f"Node [DB_Write]: SQL Server Result -> {write_res}")
+    return {
+        "audit_status": final_status,
+        "logs": logs
+    }
+
+# -------------------------------------------------------------------
+# Node 7: Fallback Exhausted Node
 # -------------------------------------------------------------------
 def retry_exhausted_node(state: AuditAgentState) -> Dict[str, Any]:
     logs = state["logs"]
@@ -172,44 +197,47 @@ def retry_exhausted_node(state: AuditAgentState) -> Dict[str, Any]:
     return {
         "audit_status": "FAILED_RETRY_EXHAUSTED",
         "risk_level": "HIGH",
-        "discrepancy_reason": f"System failed to resolve tool error after {state['max_retries']} retries. Last error: {state.get('tool_error')}",
+        "discrepancy_reason": f"System failed to resolve tool error after {state['max_retries']} retries.",
         "logs": logs
     }
 
 # -------------------------------------------------------------------
-# Conditional Router 1: ERP Query Result Evaluation
+# Conditional Router Logic
 # -------------------------------------------------------------------
 def evaluate_erp_outcome(state: AuditAgentState) -> str:
-    # If error occurred, route to reflection OR exhausted fallback
     if state.get("tool_error"):
         if state.get("retry_count", 0) < state.get("max_retries", 3):
             return "reflect_and_retry"
         return "retry_exhausted"
     
-    # If successful, check discrepancy
     if state["is_discrepancy_detected"]:
         return "query_compliance_risk"
     return "auto_approve"
 
 # -------------------------------------------------------------------
-# Build and Compile the Graph State Machine
+# Build Graph with SQLite Checkpointer & HITL Interrupt Boundary
 # -------------------------------------------------------------------
+DB_CHECKPOINT_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "..", "data", "checkpoints.sqlite")
+os.makedirs(os.path.dirname(DB_CHECKPOINT_PATH), exist_ok=True)
+
+# Initialize SQLite Connection for Checkpointers
+conn = sqlite3.connect(DB_CHECKPOINT_PATH, check_same_thread=False)
+checkpointer = SqliteSaver(conn)
+
 def build_graph():
     workflow = StateGraph(AuditAgentState)
 
-    # Register All Nodes
     workflow.add_node("extract_invoice", extract_invoice_node)
     workflow.add_node("query_erp_mcp", query_erp_mcp_node)
     workflow.add_node("reflect_and_retry", reflect_and_retry_node)
     workflow.add_node("query_compliance_risk", query_compliance_risk_node)
     workflow.add_node("auto_approve", auto_approve_node)
+    workflow.add_node("execute_db_write", execute_db_write_node)
     workflow.add_node("retry_exhausted", retry_exhausted_node)
 
-    # Set Entry Point
     workflow.set_entry_point("extract_invoice")
     workflow.add_edge("extract_invoice", "query_erp_mcp")
 
-    # Conditional Routing from ERP Query Node
     workflow.add_conditional_edges(
         "query_erp_mcp",
         evaluate_erp_outcome,
@@ -221,14 +249,16 @@ def build_graph():
         }
     )
 
-    # CYCLIC EDGE: Reflection node loops BACK into query_erp_mcp to retry!
     workflow.add_edge("reflect_and_retry", "query_erp_mcp")
-
-    # Final Edges
-    workflow.add_edge("query_compliance_risk", END)
-    workflow.add_edge("auto_approve", END)
+    workflow.add_edge("query_compliance_risk", "execute_db_write")
+    workflow.add_edge("auto_approve", "execute_db_write")
+    workflow.add_edge("execute_db_write", END)
     workflow.add_edge("retry_exhausted", END)
 
-    return workflow.compile()
+    # CRITICAL: Interrupt BEFORE running execute_db_write to enforce HITL
+    return workflow.compile(
+        checkpointer=checkpointer,
+        interrupt_before=["execute_db_write"]
+    )
 
 audit_app = build_graph()
