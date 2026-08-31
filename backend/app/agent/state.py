@@ -2,7 +2,7 @@ from typing import TypedDict, Optional, List, Dict, Any
 
 class AuditAgentState(TypedDict):
     """
-    The central state schema passed between all nodes in the LangGraph execution graph.
+    Central state schema with self-correction retry and reflection tracking.
     """
     # Raw Input
     invoice_raw_text: str
@@ -25,9 +25,14 @@ class AuditAgentState(TypedDict):
     is_discrepancy_detected: bool
     risk_level: str  # 'LOW', 'MEDIUM', 'HIGH'
     
+    # Error Handling, Reflection & Cycle Recovery
+    retry_count: int
+    max_retries: int
+    tool_error: Optional[str]
+    reflection_notes: Optional[str]
+    
     # Workflow Execution Control
-    next_node: str
-    audit_status: str  # 'IN_PROGRESS', 'PENDING_HUMAN_APPROVAL', 'APPROVED', 'REJECTED'
+    audit_status: str  # 'IN_PROGRESS', 'PENDING_HUMAN_APPROVAL', 'APPROVED', 'REJECTED', 'FAILED_RETRY_EXHAUSTED'
     discrepancy_reason: str
     human_approved: Optional[bool]
     
