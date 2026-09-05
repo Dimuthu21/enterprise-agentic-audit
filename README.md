@@ -1,12 +1,14 @@
 # 🛡️ AuditGraph-MCP: Enterprise Agentic Audit Engine
 
+![Live System Demo](demo.gif)
+
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-0.2+-orange.svg)](https://www.langchain.com/langgraph)
 [![FastMCP](https://img.shields.io/badge/Model_Context_Protocol-FastMCP-purple.svg)](https://github.com/jlowin/fastmcp)
 [![Docker Ready](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com/)
 
-**AuditGraph-MCP** is an enterprise-grade, autonomous invoice audit system built with **LangGraph**, **FastMCP (Model Context Protocol)**, **SQL Server**, and **FastAPI**. It processes unstructured invoice data, queries database records using standardized MCP tools, enforces financial compliance rules, halts execution for **Human-in-the-Loop (HITL)** approvals on high-risk discrepancies, and streams real-time execution trajectories to a modern **Streamlit** UI via Server-Sent Events (SSE).
+**AuditGraph-MCP** is an enterprise-grade, autonomous invoice audit system built with **LangGraph**, **Google Gemini**, **FastMCP (Model Context Protocol)**, **SQL Server**, and **FastAPI**. It processes unstructured invoice data, queries database records using standardized MCP tools, enforces financial compliance rules, halts execution for **Human-in-the-Loop (HITL)** approvals on high-risk discrepancies, and streams real-time execution trajectories to a modern **Streamlit** UI via Server-Sent Events (SSE).
 
 ---
 
@@ -45,6 +47,7 @@
 ## ✨ Key Features
 
 - **🤖 Autonomous Agentic Workflow** — LangGraph-powered state machine orchestrating multi-node audit sequences.
+- **🧠 Google Gemini Reasoning** — Gemini-driven LLM reasoning for invoice interpretation, anomaly detection, and compliance judgment.
 - **🔌 FastMCP Database Tooling** — Standardized Model Context Protocol (MCP) server for robust, schema-bound SQL Server interactions.
 - **🚨 Human-in-the-Loop (HITL) Intercepts** — Dynamic workflow halting whenever billing discrepancies exceed tolerance thresholds, allowing human reviewers to approve or reject actions.
 - **⚡ Server-Sent Events (SSE) Streaming** — Real-time event streaming (`/api/audit/stream`) pushing node trajectory logs directly to the Streamlit frontend.
@@ -59,7 +62,7 @@
 | Category | Technologies |
 |---|---|
 | **Core Frameworks** | Python 3.11, FastAPI, Uvicorn |
-| **Agentic AI** | LangGraph, LangChain Core, FastMCP |
+| **Agentic AI & Models** | LangGraph, LangChain Core, FastMCP, Google Gemini |
 | **Vector & RAG Search** | ChromaDB, Sentence-Transformers |
 | **Database** | Microsoft SQL Server (`pyodbc`), SQLite (LangGraph Checkpointer) |
 | **Frontend** | Streamlit, SSEClient |
@@ -75,6 +78,7 @@ enterprise-agentic-audit/
 │   └── app/
 │       ├── main.py          # FastAPI entrypoint with SSE and HITL routes
 │       └── app_ui.py        # Streamlit UI dashboard
+├── demo.gif                  # Live system demo recording
 ├── Dockerfile                # Production Linux container image definition
 ├── render.yaml                # Infrastructure-as-code cloud blueprint
 ├── requirements.txt           # System dependency specification
@@ -112,10 +116,9 @@ pip install -r requirements.txt
 ### 3. Environment Configuration
 Create a `.env` file in the root directory:
 ```env
-OPENAI_API_KEY=your_openai_api_key
-LANGCHAIN_TRACING_V2=true
-LANGCHAIN_API_KEY=your_langsmith_api_key
-DATABASE_URL=your_sql_server_connection_string
+GEMINI_API_KEY=your_gemini_api_key
+DB_SERVER=your_sql_server_hostname
+DB_NAME=your_database_name
 ```
 
 ### 4. Launch the Backend Server

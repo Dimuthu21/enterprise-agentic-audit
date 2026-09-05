@@ -5,7 +5,6 @@ import pandas as pd
 import sseclient
 
 API_BASE_URL = "http://127.0.0.1:8000"
-
 st.set_page_config(
     page_title="Enterprise Agentic Audit Dashboard",
     page_icon="🛡️",
