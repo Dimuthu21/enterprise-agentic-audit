@@ -1,0 +1,652 @@
+[
+    {
+        "id": "TEST-001",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2001\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-002",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2002\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-003",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2003\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-004",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2004\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-005",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2005\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-006",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2006\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-007",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2007\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-008",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2008\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-009",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-2009\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-010",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-20010\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-011",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-20011\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-012",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-20012\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-013",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-20013\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-014",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-20014\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-015",
+        "category": "VALID",
+        "invoice_text": "INVOICE ID: INV-20015\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1200.0,
+            "expected_status": "APPROVED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 0.0
+        }
+    },
+    {
+        "id": "TEST-016",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30016\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1910.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1910.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 710.0
+        }
+    },
+    {
+        "id": "TEST-017",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30017\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1920.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1920.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 720.0
+        }
+    },
+    {
+        "id": "TEST-018",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30018\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1930.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1930.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 730.0
+        }
+    },
+    {
+        "id": "TEST-019",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30019\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1940.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1940.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 740.0
+        }
+    },
+    {
+        "id": "TEST-020",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30020\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1950.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1950.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 750.0
+        }
+    },
+    {
+        "id": "TEST-021",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30021\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1960.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1960.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 760.0
+        }
+    },
+    {
+        "id": "TEST-022",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30022\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1970.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1970.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 770.0
+        }
+    },
+    {
+        "id": "TEST-023",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30023\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1980.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1980.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 780.0
+        }
+    },
+    {
+        "id": "TEST-024",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30024\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1990.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 1990.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 790.0
+        }
+    },
+    {
+        "id": "TEST-025",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30025\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2000.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 2000.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 800.0
+        }
+    },
+    {
+        "id": "TEST-026",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30026\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2010.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 2010.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 810.0
+        }
+    },
+    {
+        "id": "TEST-027",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30027\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2020.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 2020.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 820.0
+        }
+    },
+    {
+        "id": "TEST-028",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30028\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2030.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 2030.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 830.0
+        }
+    },
+    {
+        "id": "TEST-029",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30029\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2040.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 2040.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 840.0
+        }
+    },
+    {
+        "id": "TEST-030",
+        "category": "PRICING_DISCREPANCY",
+        "invoice_text": "INVOICE ID: INV-30030\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2050.00\nDescription: Server upgrades and software licensing.",
+        "expected_outputs": {
+            "po_number": "PO-1001",
+            "vendor_name": "Acme IT Solutions",
+            "billed_amount": 2050.0,
+            "expected_status": "PENDING_HUMAN_APPROVAL",
+            "requires_human_approval": true,
+            "expected_discrepancy": 850.0
+        }
+    },
+    {
+        "id": "TEST-031",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40031\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-032",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40032\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-033",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40033\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-034",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40034\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-035",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40035\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-036",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40036\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-037",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40037\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-038",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40038\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-039",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40039\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-040",
+        "category": "HIGH_RISK_VENDOR",
+        "invoice_text": "INVOICE ID: INV-40040\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
+        "expected_outputs": {
+            "po_number": "PO-9999",
+            "vendor_name": "Shell Corp Logistics",
+            "billed_amount": 4500.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 4500.0
+        }
+    },
+    {
+        "id": "TEST-041",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50041\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-042",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50042\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-043",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50043\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-044",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50044\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-045",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50045\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-046",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50046\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-047",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50047\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-048",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50048\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-049",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50049\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    },
+    {
+        "id": "TEST-050",
+        "category": "POLICY_VIOLATION",
+        "invoice_text": "INVOICE ID: INV-50050\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
+        "expected_outputs": {
+            "po_number": "UNKNOWN",
+            "vendor_name": "Global Consulting Group",
+            "billed_amount": 8900.0,
+            "expected_status": "REJECTED",
+            "requires_human_approval": false,
+            "expected_discrepancy": 8900.0
+        }
+    }
+]
