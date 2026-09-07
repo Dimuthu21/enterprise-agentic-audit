@@ -29,4 +29,3 @@ def check(vendor_name, mode):
         except (httpx.HTTPError, ValueError, KeyError):
             if attempt < 2: time.sleep(.25 * 2**attempt)
     return {'mode':'live','assessment':'unavailable','sources':[],'reason':'Provider failed after bounded retries'}
-

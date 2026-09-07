@@ -47,4 +47,3 @@ class ToolResult(StrictModel):
     success: bool
     data: dict[str, Any] = Field(default_factory=dict)
     error: str | None = None
-

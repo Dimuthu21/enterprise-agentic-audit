@@ -1,3 +1,4 @@
+# Runtime dependencies for the API, MCP server, and Streamlit interface.
 google-genai==2.20.0
 mcp==1.29.1
 pyodbc==5.3.0

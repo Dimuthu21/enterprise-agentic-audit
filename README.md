@@ -1,4 +1,18 @@
-# Gemini invoice audit with MCP and deterministic controls
+<div align="center">
+
+# Invoice Audit Intelligence
+
+### A Gemini-powered, evidence-led workflow for invoice review and human approval
+
+[![Python 3.13](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.141-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Gemini](https://img.shields.io/badge/Google_Gemini-API-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
+[![Model Context Protocol](https://img.shields.io/badge/MCP-1.29-5A45FF)](https://modelcontextprotocol.io/)
+[![SQL Server](https://img.shields.io/badge/SQL_Server-ERP-CC2927?logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
+
+**Built by R.D.D.S Rajamuni**
+
+</div>
 
 This application extracts **USD text invoices** using Gemini, retrieves ERP/policy/web evidence through real MCP stdio clients, applies exact Python financial rules, and explains the result using retrieved policy evidence. Eligible cases persist automatically. Review cases pause in SQLite-backed LangGraph state and require a server-authenticated reviewer.
 
@@ -179,7 +193,7 @@ docker run --rm --env-file .env -p 8000:8000 -v audit-data:/app/data invoice-aud
 
 Docker packaging is implemented but was not built here because Docker is unavailable. Adjust server addresses and data paths for containers; `localhost` inside a container is not your host SQL Server. The Render file is an optional configuration template with persistent storage, not a verified deployment.
 
-## Feature status and supported claims
+## Feature overview
 
 | Feature | Status | Evidence / limitation |
 |---|---|---|
@@ -194,6 +208,13 @@ Docker packaging is implemented but was not built here because Docker is unavail
 | SQLite ERP / canonical policy / demo web | Explicit demo modes | Labeled; demo web always requires review |
 | Evaluation | Implemented | 56 cases run real graph/API with controlled responses |
 | Docker deployment | Packaging implemented; build unverified | Docker unavailable; nothing deployed |
-| Enterprise SSO, tenant isolation, OCR/PDF ingestion, non-USD invoices | Incomplete / outside implemented scope | Text invoices and local token authentication only |
+| Enterprise SSO, tenant isolation, OCR/PDF ingestion, non-USD invoices | Planned scope | Text invoices and local token authentication are supported today |
 
-Accurate CV wording: **“Implemented a Gemini-integrated invoice-audit workflow with real MCP stdio tools, versioned deterministic financial controls, citation-validated policy explanations, persistent human review and an API-driven offline evaluation harness.”** Mention offline test results with their scope. Do not claim measured live Gemini accuracy, production deployment, autonomous payment authorization, verified fraud detection or production SQL Server reliability.
+---
+
+## Author
+
+**R.D.D.S Rajamuni**<br>
+Software developer focused on building practical, trustworthy AI systems that connect language models with structured business data, deterministic controls, and clear human decision points.
+
+This project demonstrates an end-to-end approach to intelligent invoice auditing: structured Gemini extraction, MCP-based evidence retrieval, policy-aware decisioning, persistent review workflows, and an operator-focused interface.

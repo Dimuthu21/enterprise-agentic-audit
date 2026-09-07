@@ -33,4 +33,3 @@ def search(query):
     return {'policies':found, 'retrieval':'chroma', 'version':VERSION}
 
 if __name__ == '__main__': reindex()
-
