@@ -1,0 +1,1657 @@
+{
+  "mode": "offline-controlled",
+  "timestamp": "2026-09-07T08:11:13.264038+00:00",
+  "model": "controlled model responses; NOT Gemini accuracy",
+  "policy_version": "2026-09-07.1",
+  "config": {
+    "iterations": 3,
+    "tool_calls": 6,
+    "timeout_seconds": 60.0,
+    "retries": 2
+  },
+  "dependencies": {
+    "google-genai": "2.20.0",
+    "mcp": "1.29.1",
+    "langgraph": "1.2.11",
+    "pydantic": "2.13.4"
+  },
+  "total_run": 56,
+  "passed": 56,
+  "mean_latency_seconds": 0.14716462500239555,
+  "categories": {
+    "matching": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "underbilling": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "small_overage": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "absolute_tolerance_boundary": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "percentage_tolerance_below": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "percentage_tolerance_boundary": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "absolute_material_boundary": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "absolute_material_above": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "percentage_material_boundary": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "percentage_material_above": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "flagged_matching": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "under_review_matching": {
+      "run": 4,
+      "passed": 4,
+      "skipped": 0
+    },
+    "missing_amount": {
+      "run": 1,
+      "passed": 1,
+      "skipped": 0
+    },
+    "malformed_po": {
+      "run": 1,
+      "passed": 1,
+      "skipped": 0
+    },
+    "missing_policy": {
+      "run": 1,
+      "passed": 1,
+      "skipped": 0
+    },
+    "vendor_unavailable": {
+      "run": 1,
+      "passed": 1,
+      "skipped": 0
+    },
+    "write_failure": {
+      "run": 1,
+      "passed": 1,
+      "skipped": 0
+    },
+    "web_unavailable": {
+      "run": 1,
+      "passed": 1,
+      "skipped": 0
+    },
+    "sow_missing": {
+      "run": 1,
+      "passed": 1,
+      "skipped": 0
+    },
+    "comma_amount": {
+      "run": 1,
+      "passed": 1,
+      "skipped": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "matching_0",
+      "category": "matching",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.1222334000049159,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "matching_1",
+      "category": "matching",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09359070000937209,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "matching_2",
+      "category": "matching",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.10076259996276349,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "matching_3",
+      "category": "matching",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.0984652999904938,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "underbilling_0",
+      "category": "underbilling",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "-100.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09642859996529296,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "underbilling_1",
+      "category": "underbilling",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "-100.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.08982709998963401,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "underbilling_2",
+      "category": "underbilling",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "-100.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09439500002190471,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "underbilling_3",
+      "category": "underbilling",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "-100.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.10065809998195618,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "small_overage_0",
+      "category": "small_overage",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "99.99",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09176739997928962,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "small_overage_1",
+      "category": "small_overage",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "99.99",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09282660001190379,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "small_overage_2",
+      "category": "small_overage",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "99.99",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09482520003803074,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "small_overage_3",
+      "category": "small_overage",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "99.99",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.10145399998873472,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "absolute_tolerance_boundary_0",
+      "category": "absolute_tolerance_boundary",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "100.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.18410600000061095,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "absolute_tolerance_boundary_1",
+      "category": "absolute_tolerance_boundary",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "100.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19129060005070642,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "absolute_tolerance_boundary_2",
+      "category": "absolute_tolerance_boundary",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "100.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.18358110002009198,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "absolute_tolerance_boundary_3",
+      "category": "absolute_tolerance_boundary",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "100.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.201926400011871,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "percentage_tolerance_below_0",
+      "category": "percentage_tolerance_below",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "499.99",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09329399996204302,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "percentage_tolerance_below_1",
+      "category": "percentage_tolerance_below",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "499.99",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09280560002662241,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "percentage_tolerance_below_2",
+      "category": "percentage_tolerance_below",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "499.99",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09107140003470704,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "percentage_tolerance_below_3",
+      "category": "percentage_tolerance_below",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "499.99",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09909830003743991,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "percentage_tolerance_boundary_0",
+      "category": "percentage_tolerance_boundary",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "500.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19934419996570796,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "percentage_tolerance_boundary_1",
+      "category": "percentage_tolerance_boundary",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "500.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19597310002427548,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "percentage_tolerance_boundary_2",
+      "category": "percentage_tolerance_boundary",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "500.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.21818899997742847,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "percentage_tolerance_boundary_3",
+      "category": "percentage_tolerance_boundary",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "500.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19856039999285713,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "absolute_material_boundary_0",
+      "category": "absolute_material_boundary",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "500.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09904729999834672,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "absolute_material_boundary_1",
+      "category": "absolute_material_boundary",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "500.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09495499997865409,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "absolute_material_boundary_2",
+      "category": "absolute_material_boundary",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "500.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.10411640000529587,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "absolute_material_boundary_3",
+      "category": "absolute_material_boundary",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "500.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09715940000023693,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "absolute_material_above_0",
+      "category": "absolute_material_above",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "500.01",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.25564019999001175,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "absolute_material_above_1",
+      "category": "absolute_material_above",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "500.01",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.1882138000219129,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "absolute_material_above_2",
+      "category": "absolute_material_above",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "500.01",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19241089996648952,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "absolute_material_above_3",
+      "category": "absolute_material_above",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "500.01",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19241879996843636,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "percentage_material_boundary_0",
+      "category": "percentage_material_boundary",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "15.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.10019869997631758,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "percentage_material_boundary_1",
+      "category": "percentage_material_boundary",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "15.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09501779999118298,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "percentage_material_boundary_2",
+      "category": "percentage_material_boundary",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "15.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09392710000975057,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "percentage_material_boundary_3",
+      "category": "percentage_material_boundary",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "15.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09596440003952011,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    },
+    {
+      "id": "percentage_material_above_0",
+      "category": "percentage_material_above",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "15.01",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19018999999389052,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "percentage_material_above_1",
+      "category": "percentage_material_above",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "15.01",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.18417580000823364,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "percentage_material_above_2",
+      "category": "percentage_material_above",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "15.01",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.1920875000068918,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "percentage_material_above_3",
+      "category": "percentage_material_above",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "15.01",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19453139998950064,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "flagged_matching_0",
+      "category": "flagged_matching",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19477030000416562,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "flagged_matching_1",
+      "category": "flagged_matching",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.18852089997380972,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "flagged_matching_2",
+      "category": "flagged_matching",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19304149999516085,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "flagged_matching_3",
+      "category": "flagged_matching",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.2113524999585934,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "under_review_matching_0",
+      "category": "under_review_matching",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19623280002269894,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "under_review_matching_1",
+      "category": "under_review_matching",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19545220001600683,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "under_review_matching_2",
+      "category": "under_review_matching",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19264329998986796,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "under_review_matching_3",
+      "category": "under_review_matching",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.20723200001521036,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "missing_amount",
+      "category": "missing_amount",
+      "actual_status": "VALIDATION_FAILED",
+      "actual_discrepancy": null,
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.0782753000385128,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "error"
+      ]
+    },
+    {
+      "id": "malformed_po",
+      "category": "malformed_po",
+      "actual_status": "VALIDATION_FAILED",
+      "actual_discrepancy": null,
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.0778530000243336,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "error"
+      ]
+    },
+    {
+      "id": "missing_policy",
+      "category": "missing_policy",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.19740750000346452,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "vendor_unavailable",
+      "category": "vendor_unavailable",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.20080029999371618,
+      "tool_failures": 1,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "write_failure",
+      "category": "write_failure",
+      "actual_status": "PERSISTENCE_FAILED",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09970590000739321,
+      "tool_failures": 1,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "error"
+      ]
+    },
+    {
+      "id": "web_unavailable",
+      "category": "web_unavailable",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.20237950002774596,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "sow_missing",
+      "category": "sow_missing",
+      "actual_status": "AWAITING_REVIEW",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": true
+      },
+      "passed": true,
+      "latency_seconds": 0.2117007000488229,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "awaiting_human_approval"
+      ]
+    },
+    {
+      "id": "comma_amount",
+      "category": "comma_amount",
+      "actual_status": "AUTO_APPROVED",
+      "actual_discrepancy": "0.00",
+      "metrics": {
+        "extraction_contract_correct": true,
+        "decision_correct": true,
+        "discrepancy_correct": true,
+        "classification_correct": true,
+        "review_routing_correct": true,
+        "retrieval_coverage_correct": true,
+        "tool_failure_detection_correct": true,
+        "review_resume_and_duplicate_protection_correct": null
+      },
+      "passed": true,
+      "latency_seconds": 0.09732270002132282,
+      "tool_failures": 0,
+      "events": [
+        "started",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "node_update",
+        "completed"
+      ]
+    }
+  ]
+}

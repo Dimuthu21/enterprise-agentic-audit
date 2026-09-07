@@ -1,18 +1,25 @@
+# Optional deployment template only. No deployment is performed by local setup.
 services:
   - type: web
-    name: auditgraph-mcp-backend
-    env: docker
-    plan: free
-    region: oregon
+    name: invoice-audit-backend
+    runtime: docker
     dockerfilePath: ./Dockerfile
+    disk:
+      name: audit-state
+      mountPath: /app/data
+      sizeGB: 1
     envVars:
-      - key: DATABASE_URL
+      - key: GEMINI_API_KEY
         sync: false
-      - key: LANGCHAIN_TRACING_V2
-        value: "true"
-      - key: LANGCHAIN_API_KEY
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: DB_CONNECTION_STRING
         sync: false
-      - key: OPENAI_API_KEY
+      - key: AUDIT_USERS_JSON
         sync: false
       - key: TAVILY_API_KEY
         sync: false
+      - key: WEB_RISK_MODE
+        value: live
+      - key: POLICY_MODE
+        value: chroma

@@ -1,27 +1,9 @@
-import pyodbc
-
-CONN_STR = (
-    "DRIVER={ODBC Driver 17 for SQL Server};"
-    "SERVER=LAPTOP-3THD09KC;"
-    "DATABASE=AuditDB;"
-    "Trusted_Connection=yes;"
-)
+"""Read-only connectivity check. Uses the same environment configuration as MCP."""
+from backend.app.storage import connection
 
 def test_connection():
-    try:
-        conn = pyodbc.connect(CONN_STR)
-        cursor = conn.cursor()
+    with connection() as conn:
+        count=conn.cursor().execute('SELECT COUNT(*) FROM PurchaseOrders').fetchone()[0]
+        print(f'Connected; purchase order rows: {count}')
 
-        cursor.execute("SELECT COUNT(*) FROM PurchaseOrders;")
-        row_count = cursor.fetchone()[0]
-
-        print(f"Successfully connected! Found {row_count} Purchase Orders in local SQL Server.")
-
-        conn.close()
-
-    except Exception as e:
-        print(f"Error connecting to local SQL Server: {e}")
-
-
-if __name__ == "__main__":
-    test_connection()
+if __name__=='__main__': test_connection()

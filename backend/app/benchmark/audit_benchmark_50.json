@@ -1,652 +1,2294 @@
 [
-    {
-        "id": "TEST-001",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2001\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
+  {
+    "id": "matching_0",
+    "category": "matching",
+    "invoice_text": "INVOICE ID: INV-1\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
     },
-    {
-        "id": "TEST-002",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2002\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
     },
-    {
-        "id": "TEST-003",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2003\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
     },
-    {
-        "id": "TEST-004",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2004\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-005",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2005\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-006",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2006\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-007",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2007\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-008",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2008\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-009",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-2009\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-010",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-20010\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-011",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-20011\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-012",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-20012\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-013",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-20013\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-014",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-20014\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-015",
-        "category": "VALID",
-        "invoice_text": "INVOICE ID: INV-20015\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1200.00\nDescription: Standard hardware supplies and routine maintenance.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1200.0,
-            "expected_status": "APPROVED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 0.0
-        }
-    },
-    {
-        "id": "TEST-016",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30016\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1910.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1910.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 710.0
-        }
-    },
-    {
-        "id": "TEST-017",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30017\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1920.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1920.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 720.0
-        }
-    },
-    {
-        "id": "TEST-018",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30018\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1930.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1930.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 730.0
-        }
-    },
-    {
-        "id": "TEST-019",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30019\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1940.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1940.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 740.0
-        }
-    },
-    {
-        "id": "TEST-020",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30020\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1950.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1950.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 750.0
-        }
-    },
-    {
-        "id": "TEST-021",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30021\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1960.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1960.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 760.0
-        }
-    },
-    {
-        "id": "TEST-022",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30022\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1970.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1970.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 770.0
-        }
-    },
-    {
-        "id": "TEST-023",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30023\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1980.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1980.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 780.0
-        }
-    },
-    {
-        "id": "TEST-024",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30024\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $1990.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 1990.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 790.0
-        }
-    },
-    {
-        "id": "TEST-025",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30025\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2000.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 2000.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 800.0
-        }
-    },
-    {
-        "id": "TEST-026",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30026\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2010.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 2010.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 810.0
-        }
-    },
-    {
-        "id": "TEST-027",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30027\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2020.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 2020.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 820.0
-        }
-    },
-    {
-        "id": "TEST-028",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30028\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2030.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 2030.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 830.0
-        }
-    },
-    {
-        "id": "TEST-029",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30029\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2040.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 2040.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 840.0
-        }
-    },
-    {
-        "id": "TEST-030",
-        "category": "PRICING_DISCREPANCY",
-        "invoice_text": "INVOICE ID: INV-30030\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: $2050.00\nDescription: Server upgrades and software licensing.",
-        "expected_outputs": {
-            "po_number": "PO-1001",
-            "vendor_name": "Acme IT Solutions",
-            "billed_amount": 2050.0,
-            "expected_status": "PENDING_HUMAN_APPROVAL",
-            "requires_human_approval": true,
-            "expected_discrepancy": 850.0
-        }
-    },
-    {
-        "id": "TEST-031",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40031\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-032",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40032\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-033",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40033\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-034",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40034\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-035",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40035\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-036",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40036\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-037",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40037\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-038",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40038\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-039",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40039\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-040",
-        "category": "HIGH_RISK_VENDOR",
-        "invoice_text": "INVOICE ID: INV-40040\nPO NUMBER: PO-9999\nVendor: Shell Corp Logistics\nTotal Amount Billed: $4500.00\nDescription: Expedited overseas shipping and handling.",
-        "expected_outputs": {
-            "po_number": "PO-9999",
-            "vendor_name": "Shell Corp Logistics",
-            "billed_amount": 4500.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 4500.0
-        }
-    },
-    {
-        "id": "TEST-041",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50041\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-042",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50042\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-043",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50043\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-044",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50044\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-045",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50045\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-046",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50046\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-047",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50047\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-048",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50048\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-049",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50049\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
-    },
-    {
-        "id": "TEST-050",
-        "category": "POLICY_VIOLATION",
-        "invoice_text": "INVOICE ID: INV-50050\nPO NUMBER: UNKNOWN\nVendor: Global Consulting Group\nTotal Amount Billed: $8900.00\nDescription: Unapproved executive advisory services.",
-        "expected_outputs": {
-            "po_number": "UNKNOWN",
-            "vendor_name": "Global Consulting Group",
-            "billed_amount": 8900.0,
-            "expected_status": "REJECTED",
-            "requires_human_approval": false,
-            "expected_discrepancy": 8900.0
-        }
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-1",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
     }
+  },
+  {
+    "id": "matching_1",
+    "category": "matching",
+    "invoice_text": "INVOICE ID: INV-2\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-2",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-2",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "matching_2",
+    "category": "matching",
+    "invoice_text": "INVOICE ID: INV-3\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-3",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-3",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "matching_3",
+    "category": "matching",
+    "invoice_text": "INVOICE ID: INV-4\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-4",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-4",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "underbilling_0",
+    "category": "underbilling",
+    "invoice_text": "INVOICE ID: INV-5\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1100.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-5",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1100.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "-100.00",
+      "classification": "underbilling",
+      "extraction": {
+        "invoice_id": "INV-5",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1100.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "underbilling_1",
+    "category": "underbilling",
+    "invoice_text": "INVOICE ID: INV-6\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,100.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-6",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1100.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "-100.00",
+      "classification": "underbilling",
+      "extraction": {
+        "invoice_id": "INV-6",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1100.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "underbilling_2",
+    "category": "underbilling",
+    "invoice_text": "INVOICE ID: INV-7\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1100.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-7",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1100.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "-100.00",
+      "classification": "underbilling",
+      "extraction": {
+        "invoice_id": "INV-7",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1100.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "underbilling_3",
+    "category": "underbilling",
+    "invoice_text": "INVOICE ID: INV-8\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,100.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-8",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1100.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "-100.00",
+      "classification": "underbilling",
+      "extraction": {
+        "invoice_id": "INV-8",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1100.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "small_overage_0",
+    "category": "small_overage",
+    "invoice_text": "INVOICE ID: INV-9\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1299.99\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-9",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1299.99",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "99.99",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-9",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1299.99",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "small_overage_1",
+    "category": "small_overage",
+    "invoice_text": "INVOICE ID: INV-10\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,299.99\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-10",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1299.99",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "99.99",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-10",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1299.99",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "small_overage_2",
+    "category": "small_overage",
+    "invoice_text": "INVOICE ID: INV-11\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1299.99\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-11",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1299.99",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "99.99",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-11",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1299.99",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "small_overage_3",
+    "category": "small_overage",
+    "invoice_text": "INVOICE ID: INV-12\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,299.99\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-12",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1299.99",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "99.99",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-12",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1299.99",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_tolerance_boundary_0",
+    "category": "absolute_tolerance_boundary",
+    "invoice_text": "INVOICE ID: INV-13\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1300.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-13",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1300.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "100.00",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-13",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1300.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_tolerance_boundary_1",
+    "category": "absolute_tolerance_boundary",
+    "invoice_text": "INVOICE ID: INV-14\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,300.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-14",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1300.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "100.00",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-14",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1300.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_tolerance_boundary_2",
+    "category": "absolute_tolerance_boundary",
+    "invoice_text": "INVOICE ID: INV-15\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1300.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-15",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1300.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "100.00",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-15",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1300.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_tolerance_boundary_3",
+    "category": "absolute_tolerance_boundary",
+    "invoice_text": "INVOICE ID: INV-16\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,300.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-16",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1300.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "100.00",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-16",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1300.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_tolerance_below_0",
+    "category": "percentage_tolerance_below",
+    "invoice_text": "INVOICE ID: INV-17\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $10499.99\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-17",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "10499.99",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "10000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "499.99",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-17",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "10499.99",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_tolerance_below_1",
+    "category": "percentage_tolerance_below",
+    "invoice_text": "INVOICE ID: INV-18\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $10,499.99\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-18",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "10499.99",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "10000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "499.99",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-18",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "10499.99",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_tolerance_below_2",
+    "category": "percentage_tolerance_below",
+    "invoice_text": "INVOICE ID: INV-19\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $10499.99\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-19",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "10499.99",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "10000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "499.99",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-19",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "10499.99",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_tolerance_below_3",
+    "category": "percentage_tolerance_below",
+    "invoice_text": "INVOICE ID: INV-20\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $10,499.99\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-20",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "10499.99",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "10000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "499.99",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-20",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "10499.99",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_tolerance_boundary_0",
+    "category": "percentage_tolerance_boundary",
+    "invoice_text": "INVOICE ID: INV-21\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $10500.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-21",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "10500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "10000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "500.00",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-21",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "10500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_tolerance_boundary_1",
+    "category": "percentage_tolerance_boundary",
+    "invoice_text": "INVOICE ID: INV-22\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $10,500.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-22",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "10500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "10000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "500.00",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-22",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "10500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_tolerance_boundary_2",
+    "category": "percentage_tolerance_boundary",
+    "invoice_text": "INVOICE ID: INV-23\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $10500.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-23",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "10500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "10000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "500.00",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-23",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "10500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_tolerance_boundary_3",
+    "category": "percentage_tolerance_boundary",
+    "invoice_text": "INVOICE ID: INV-24\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $10,500.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-24",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "10500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "10000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "500.00",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-24",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "10500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_material_boundary_0",
+    "category": "absolute_material_boundary",
+    "invoice_text": "INVOICE ID: INV-25\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $100500.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-25",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "100500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "500.00",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-25",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "100500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_material_boundary_1",
+    "category": "absolute_material_boundary",
+    "invoice_text": "INVOICE ID: INV-26\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $100,500.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-26",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "100500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "500.00",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-26",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "100500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_material_boundary_2",
+    "category": "absolute_material_boundary",
+    "invoice_text": "INVOICE ID: INV-27\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $100500.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-27",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "100500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "500.00",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-27",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "100500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_material_boundary_3",
+    "category": "absolute_material_boundary",
+    "invoice_text": "INVOICE ID: INV-28\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $100,500.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-28",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "100500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "500.00",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-28",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "100500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_material_above_0",
+    "category": "absolute_material_above",
+    "invoice_text": "INVOICE ID: INV-29\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $100500.01\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-29",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "100500.01",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "500.01",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-29",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "100500.01",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_material_above_1",
+    "category": "absolute_material_above",
+    "invoice_text": "INVOICE ID: INV-30\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $100,500.01\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-30",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "100500.01",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "500.01",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-30",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "100500.01",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_material_above_2",
+    "category": "absolute_material_above",
+    "invoice_text": "INVOICE ID: INV-31\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $100500.01\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-31",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "100500.01",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "500.01",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-31",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "100500.01",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "absolute_material_above_3",
+    "category": "absolute_material_above",
+    "invoice_text": "INVOICE ID: INV-32\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $100,500.01\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-32",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "100500.01",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "500.01",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-32",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "100500.01",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_material_boundary_0",
+    "category": "percentage_material_boundary",
+    "invoice_text": "INVOICE ID: INV-33\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $115.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-33",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "115.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "15.00",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-33",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "115.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_material_boundary_1",
+    "category": "percentage_material_boundary",
+    "invoice_text": "INVOICE ID: INV-34\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $115.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-34",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "115.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "15.00",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-34",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "115.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_material_boundary_2",
+    "category": "percentage_material_boundary",
+    "invoice_text": "INVOICE ID: INV-35\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $115.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-35",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "115.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "15.00",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-35",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "115.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_material_boundary_3",
+    "category": "percentage_material_boundary",
+    "invoice_text": "INVOICE ID: INV-36\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $115.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-36",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "115.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "15.00",
+      "classification": "tolerated_overbilling",
+      "extraction": {
+        "invoice_id": "INV-36",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "115.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_material_above_0",
+    "category": "percentage_material_above",
+    "invoice_text": "INVOICE ID: INV-37\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $115.01\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-37",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "115.01",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "15.01",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-37",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "115.01",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_material_above_1",
+    "category": "percentage_material_above",
+    "invoice_text": "INVOICE ID: INV-38\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $115.01\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-38",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "115.01",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "15.01",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-38",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "115.01",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_material_above_2",
+    "category": "percentage_material_above",
+    "invoice_text": "INVOICE ID: INV-39\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $115.01\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-39",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "115.01",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "15.01",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-39",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "115.01",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "percentage_material_above_3",
+    "category": "percentage_material_above",
+    "invoice_text": "INVOICE ID: INV-40\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $115.01\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-40",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "115.01",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "100.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "15.01",
+      "classification": "material_overbilling",
+      "extraction": {
+        "invoice_id": "INV-40",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "115.01",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "flagged_matching_0",
+    "category": "flagged_matching",
+    "invoice_text": "INVOICE ID: INV-41\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-41",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "FLAGGED"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-41",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "flagged_matching_1",
+    "category": "flagged_matching",
+    "invoice_text": "INVOICE ID: INV-42\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-42",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "FLAGGED"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-42",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "flagged_matching_2",
+    "category": "flagged_matching",
+    "invoice_text": "INVOICE ID: INV-43\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-43",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "FLAGGED"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-43",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "flagged_matching_3",
+    "category": "flagged_matching",
+    "invoice_text": "INVOICE ID: INV-44\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-44",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "FLAGGED"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-44",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "under_review_matching_0",
+    "category": "under_review_matching",
+    "invoice_text": "INVOICE ID: INV-45\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-45",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "UNDER_REVIEW"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-45",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "under_review_matching_1",
+    "category": "under_review_matching",
+    "invoice_text": "INVOICE ID: INV-46\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-46",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "UNDER_REVIEW"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-46",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "under_review_matching_2",
+    "category": "under_review_matching",
+    "invoice_text": "INVOICE ID: INV-47\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-47",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "UNDER_REVIEW"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-47",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "under_review_matching_3",
+    "category": "under_review_matching",
+    "invoice_text": "INVOICE ID: INV-48\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-48",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "UNDER_REVIEW"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-48",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "missing_amount",
+    "category": "missing_amount",
+    "invoice_text": "INVOICE ID: INV-1\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nCurrency: USD",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": null,
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "VALIDATION_FAILED",
+      "discrepancy": null,
+      "classification": null,
+      "extraction": null,
+      "retrieved_count": 0,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "malformed_po",
+    "category": "malformed_po",
+    "invoice_text": "Invoice missing purchase order. USD $1200.00",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "invalid",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "VALIDATION_FAILED",
+      "discrepancy": null,
+      "classification": null,
+      "extraction": null,
+      "retrieved_count": 0,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "missing_policy",
+    "category": "missing_policy",
+    "invoice_text": "INVOICE ID: INV-1\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-1",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 0,
+      "tool_failures": 0
+    },
+    "policies": []
+  },
+  {
+    "id": "vendor_unavailable",
+    "category": "vendor_unavailable",
+    "invoice_text": "INVOICE ID: INV-1\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-1",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 1
+    },
+    "fail": "get_vendor_status"
+  },
+  {
+    "id": "write_failure",
+    "category": "write_failure",
+    "invoice_text": "INVOICE ID: INV-1\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "PERSISTENCE_FAILED",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-1",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 1
+    },
+    "fail": "write"
+  },
+  {
+    "id": "web_unavailable",
+    "category": "web_unavailable",
+    "invoice_text": "INVOICE ID: INV-1\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1200.00\nDescription: Hardware",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "1200.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1200.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-1",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1200.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    },
+    "web": {
+      "mode": "live",
+      "assessment": "unavailable",
+      "sources": []
+    }
+  },
+  {
+    "id": "sow_missing",
+    "category": "sow_missing",
+    "invoice_text": "INVOICE ID: INV-1\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $3000.00",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "3000.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "3000.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Software",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AWAITING_REVIEW",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-1",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "3000.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  },
+  {
+    "id": "comma_amount",
+    "category": "comma_amount",
+    "invoice_text": "INVOICE ID: INV-1\nPO NUMBER: PO-1001\nVendor: Acme IT Solutions\nTotal Amount Billed: USD $1,500.00",
+    "model_response": {
+      "invoice_id": "INV-1",
+      "po_number": "PO-1001",
+      "vendor_name": "Acme IT Solutions",
+      "billed_amount": "$1,500.00",
+      "currency": "USD"
+    },
+    "po": {
+      "po_number": "PO-1001",
+      "vendor_id": "VEND-001",
+      "approved_amount": "1500.00",
+      "currency": "USD",
+      "status": "OPEN",
+      "category": "Hardware",
+      "sow_verified": null,
+      "sow_reference": null
+    },
+    "vendor": {
+      "vendor_id": "VEND-001",
+      "vendor_name": "Acme IT Solutions",
+      "risk_status": "CLEAR"
+    },
+    "expected": {
+      "status": "AUTO_APPROVED",
+      "discrepancy": "0.00",
+      "classification": "matching",
+      "extraction": {
+        "invoice_id": "INV-1",
+        "po_number": "PO-1001",
+        "vendor_name": "Acme IT Solutions",
+        "billed_amount": "1500.00",
+        "currency": "USD"
+      },
+      "retrieved_count": 4,
+      "tool_failures": 0
+    }
+  }
 ]

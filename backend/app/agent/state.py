@@ -1,40 +1,17 @@
-from typing import TypedDict, Optional, List, Dict, Any
+from typing import TypedDict
 
-class AuditAgentState(TypedDict):
-    """
-    Central state schema with self-correction retry and reflection tracking.
-    """
-    # Raw Input
+class AuditAgentState(TypedDict, total=False):
+    thread_id: str
     invoice_raw_text: str
-    
-    # Extracted Invoice Fields
-    invoice_id: Optional[str]
-    po_number: Optional[str]
-    vendor_id: Optional[str]
-    vendor_name: Optional[str]
-    billed_amount: Optional[float]
-    
-    # MCP Tool Retrieval Results
-    po_db_data: Optional[str]
-    vendor_db_data: Optional[str]
-    policy_rag_data: Optional[str]
-    web_risk_data: Optional[str]
-    
-    # Calculated Discrepancies & Risk Flags
-    discrepancy_amount: float
-    is_discrepancy_detected: bool
-    risk_level: str  # 'LOW', 'MEDIUM', 'HIGH'
-    
-    # Error Handling, Reflection & Cycle Recovery
-    retry_count: int
-    max_retries: int
-    tool_error: Optional[str]
-    reflection_notes: Optional[str]
-    
-    # Workflow Execution Control
-    audit_status: str  # 'IN_PROGRESS', 'PENDING_HUMAN_APPROVAL', 'APPROVED', 'REJECTED', 'FAILED_RETRY_EXHAUSTED'
-    discrepancy_reason: str
-    human_approved: Optional[bool]
-    
-    # Execution Step Trace Logs
-    logs: List[str]
+    invoice: dict
+    facts: dict
+    trace: list[dict]
+    controls: dict
+    explanation: dict
+    review: dict
+    audit_status: str
+    intended_status: str
+    error: str
+    record: dict
+    execution: dict
+    created_at: str

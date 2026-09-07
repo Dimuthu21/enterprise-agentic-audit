@@ -19,7 +19,11 @@ CREATE TABLE PurchaseOrders (
     VendorID VARCHAR(50) FOREIGN KEY REFERENCES Vendors(VendorID),
     ApprovedAmount DECIMAL(18, 2) NOT NULL,
     ItemDescription VARCHAR(255) NOT NULL,
-    Status VARCHAR(20) DEFAULT 'OPEN'
+    Status VARCHAR(20) DEFAULT 'OPEN',
+    Currency VARCHAR(3) NULL,
+    PurchaseCategory VARCHAR(50) NULL,
+    SOWVerified BIT NULL,
+    SOWReference NVARCHAR(500) NULL
 );
 
 -- 3. AuditLogs Table
@@ -43,8 +47,8 @@ VALUES
     ('VEND-003', 'Shadow Tech Logistics', 'FLAGGED', 'Services');
 
 INSERT INTO PurchaseOrders
-    (PO_Number, VendorID, ApprovedAmount, ItemDescription, Status)
+    (PO_Number, VendorID, ApprovedAmount, ItemDescription, Status, Currency, PurchaseCategory)
 VALUES
-    ('PO-1001', 'VEND-001', 1200.00, '10 Laptops', 'OPEN'),
-    ('PO-1002', 'VEND-002', 450.00, '5 Ergonomic Chairs', 'OPEN'),
-    ('PO-1003', 'VEND-003', 3000.00, 'Custom Software Maintenance', 'OPEN');
+    ('PO-1001', 'VEND-001', 1200.00, '10 Laptops', 'OPEN', 'USD', 'Hardware'),
+    ('PO-1002', 'VEND-002', 450.00, '5 Ergonomic Chairs', 'OPEN', 'USD', 'Supplies'),
+    ('PO-1003', 'VEND-003', 3000.00, 'Custom Software Maintenance', 'OPEN', 'USD', 'Software');

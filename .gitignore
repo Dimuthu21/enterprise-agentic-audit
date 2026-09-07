@@ -15,3 +15,8 @@ __pycache__/
 data/chroma_db/
 .DS_Store
 Thumbs.db
+*.sqlite-*
+*.sqlite.registry*
+.pytest_cache/
+.venv/
+evaluation/live-results*.json

@@ -1,21 +1,11 @@
-from pydantic import BaseModel, Field
-from typing import Optional, List, Any
+from pydantic import Field, StrictBool
+from backend.app.contracts import StrictModel
 
-class InvoiceAuditRequest(BaseModel):
-    invoice_text: str = Field(..., description="Raw invoice text extracted via OCR or manual input.")
-    thread_id: Optional[str] = Field(None, description="Unique thread ID for tracking state persistence.")
+class InvoiceAuditRequest(StrictModel):
+    invoice_text: str = Field(min_length=1,max_length=50000)
+    thread_id: str | None = Field(default=None,pattern=r'^[A-Za-z0-9_-]{1,100}$')
 
-class HumanApprovalRequest(BaseModel):
-    thread_id: str = Field(..., description="Thread ID of the halted execution stream.")
-    approved: bool = Field(..., description="True to approve invoice discrepancy, False to reject.")
-    notes: Optional[str] = Field(None, description="Optional notes provided by the compliance reviewer.")
-
-class AuditLogResponse(BaseModel):
-    audit_id: int
-    invoice_id: str
-    po_number: str
-    billed_amount: float
-    discrepancy_amount: float
-    status: str
-    reason: str
-    created_at: str
+class HumanApprovalRequest(StrictModel):
+    thread_id: str = Field(pattern=r'^[A-Za-z0-9_-]{1,100}$')
+    approved: StrictBool
+    notes: str = Field(min_length=1,max_length=2000)
